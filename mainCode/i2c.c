@@ -56,21 +56,6 @@ void i2c_init()
 	SCL_1();
 }
 
-void i2c_init_read()
-{
-		
-	GPIO_InitTypeDef gpioInit;
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIO_x, ENABLE);
-	gpioInit.GPIO_Mode = GPIO_Mode_IPD;
-	gpioInit.GPIO_Pin = GPIO_PIN_x | GPIO_PIN_y;
-	gpioInit.GPIO_Speed = GPIO_Speed_50MHz;
-	
-	GPIO_Init(GPIOx, &gpioInit);
-	
-	SDA_1();
-	SCL_1();
-}
-
 void i2c_start(void)
 {
 	
